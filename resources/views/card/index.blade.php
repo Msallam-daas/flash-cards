@@ -12,12 +12,12 @@
 </div>
 @endif
 
-<div class="container">
+<div class="card-container">
 
 @foreach($cards as $card)
-
-<div class="flip-card" style="background:{{$card['color']}}">
-            <div class="flip-card-inner" >
+<div class="card-all">
+<div class="flip-card" >
+            <div class="flip-card-inner" style="background:{{$card['color']}}" >
               <div class="flip-card-front ">
                 <p class="card-title">{{$card['front']}}</p>
               </div>
@@ -27,17 +27,18 @@
             </div>
            
           </div>
-          <a class="dropdown-item" href="{{route('card.edit', $card->id)}}">EDIT</a>
+          
+          <a class="btn btn-dark" href="{{route('card.edit', $card->id)}}">EDIT</a>
           <form action="{{route('card.destroy', $card->id)}}" method="post">
         @csrf
         @method('delete')
-        <button class="dropdown-item" type="submit">DELET</button>
+        <button class="btn btn-dark" type="submit">DELET</button>
 
 </form>
       
-          
+</div >       
 @endforeach
-</div>
+</>
 
 @endsection
 
