@@ -28,7 +28,7 @@
            
           </div>
           
-          <a class="btn btn-dark" href="{{route('card.edit', $card->id)}}">EDIT</a>
+          <a  style="margin:0.5em" class="btn btn-dark" href="{{route('card.edit', $card->id)}}">EDIT</a>
           <form action="{{route('card.destroy', $card->id)}}" method="post">
         @csrf
         @method('delete')

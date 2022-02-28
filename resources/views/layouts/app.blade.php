@@ -28,7 +28,10 @@
   <a class="breadcrumb-item" href="{{route('card.create')}}">Create</a>
   </li>
   <li class="nav-item">
-  <a class="breadcrumb-item" href="{{route('card.index')}}">How to use</a>
+  <a class="breadcrumb-item" href="{{route('card.index')}}">How to Use</a>
+  </li>
+  <li class="nav-item">
+  <a class="breadcrumb-item" href="{{route('card.index')}}">Study Plan</a>
   </li>
   <li class="nav-item">
   <a class="breadcrumb-item" href="{{route('card.index')}}">Profile</a>
