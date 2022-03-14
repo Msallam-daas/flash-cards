@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Card;
+use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;
 
 
 class CardController extends Controller
@@ -26,7 +29,8 @@ class CardController extends Controller
      */
     public function create()
     {
-        return view('card.create');
+        $categories=Category::all();
+        return view('card.create',compact('categories'));
 
     }
 
@@ -43,9 +47,19 @@ class CardController extends Controller
             'front'=>'required',
             'back'=>'required',
             'color'=>'required'
+            
+          
 
         ]);
-        $card=Card::create($request->all());
+        $card=new Card();
+        $card->icon=$request->input('icon');
+        $card->front=$request->input('front');
+        $card->back=$request->input('back');
+        $card->color=$request->input('color');
+        $card->user_id=Auth::user()->id;
+        $card->category_id=$request->input('category_id');
+        $card->save();
+        // $card=Card::create($request->all());
         return redirect()->route('card.index')->with('success','success added card');
     }
 
@@ -55,9 +69,10 @@ class CardController extends Controller
      * @param  \App\Models\Card  $card
      * @return \Illuminate\Http\Response
      */
-    public function show(Card $card)
+    public function show()
     {
-        //
+      
+
     }
 
     /**
