@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Card;
 use Illuminate\Http\Request;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;
 
 class CategoryController extends Controller
 {
@@ -14,7 +17,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        $Categories=Category::all();
+        return view('category.index',compact('Categories'));
     }
 
     /**
@@ -24,7 +28,8 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('category.create');
+
     }
 
     /**
@@ -35,7 +40,21 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $request->validate([
+            'icon'=>'required',
+            'name'=>'required',
+            'color'=>'required'
+        ]);
+        $category=new Category();
+        $category->icon=$request->input('icon');
+        $category->name=$request->input('name');
+        $category->color=$request->input('color');
+        $category->user_id=Auth::user()->id;
+        $category->save();
+        // $card=Card::create($request->all());
+        return redirect()->route('category.index')->with('success','success added category');
+    
     }
 
     /**
@@ -57,7 +76,7 @@ class CategoryController extends Controller
      */
     public function edit(Category $category)
     {
-        //
+        return view('category.edit',compact('category'));
     }
 
     /**
@@ -69,7 +88,21 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category $category)
     {
-        //
+          
+        $request->validate([
+            'icon'=>'required',
+            'name'=>'required',
+            'color'=>'required'
+        ]);
+        $category=new Category();
+        $category->icon=$request->input('icon');
+        $category->namet=$request->input('name');
+        $category->color=$request->input('color');
+        $category->user_id=Auth::user()->id;
+        $category->save();
+        // $card=Card::create($request->all());
+        return redirect()->route('category.index')->with('success','success edited category');
+    
     }
 
     /**
@@ -80,6 +113,8 @@ class CategoryController extends Controller
      */
     public function destroy(Category $category)
     {
-        //
+        $card->delete();
+        return redirect()->route('category.index')->with('success','success deleted category');
+
     }
 }

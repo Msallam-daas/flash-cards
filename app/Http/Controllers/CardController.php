@@ -29,8 +29,8 @@ class CardController extends Controller
      */
     public function create()
     {
-        $categories=Category::all();
-        return view('card.create',compact('categories'));
+       
+        return view('card.create');
 
     }
 
@@ -102,10 +102,13 @@ class CardController extends Controller
             'color'=>'required'
 
         ]);
-        $card->icon = $request->icon;
-        $card->front = $request->front;
-        $card->back = $request->back;
-        $card->color = $request->color;
+        $card=new Card();
+        $card->icon=$request->input('icon');
+        $card->front=$request->input('front');
+        $card->back=$request->input('back');
+        $card->color=$request->input('color');
+        $card->user_id=Auth::user()->id;
+        $card->category_id=$request->input('category_id');
         $card->save();
         return redirect()->route('card.index')->with('success','success edited card');
     }

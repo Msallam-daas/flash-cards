@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CardController;
+use App\Http\Controllers\CategoryController;
 use App\Models\Card;
 
 /*
@@ -18,7 +19,7 @@ use App\Models\Card;
 
 
 Route::resource('card',CardController::class);
-
+Route::resource('category',CategoryController::class);
 
 Auth::routes();
 
