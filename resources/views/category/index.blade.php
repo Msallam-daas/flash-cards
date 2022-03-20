@@ -52,11 +52,12 @@
 @foreach($Categories as $category)
 <div class="card-all">
 <div class="flip-card" >
+  <a href="{{route('card.show',$category->id)}}">
             <div class="flip-card-inner" style="background:{{$category['color']}}" >
               <div class="flip-card-front ">
                 <p class="card-title">{{$category['name']}}</p>
               </div>
-              
+              </a>
             </div>
            
           </div>

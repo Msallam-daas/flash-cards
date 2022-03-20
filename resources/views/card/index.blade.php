@@ -39,6 +39,7 @@
 </ul>
 </nav>
 
+
 <h1>Flash Card</h1>
 <a class="btn btn-link float-end" href="{{route('card.create')}}">Create Card</a>
 @if (session('success'))

@@ -18,8 +18,7 @@ class CardController extends Controller
      */
     public function index()
     {
-        $cards=Card::all();
-        return view('card.index',compact('cards'));
+
     }
 
     /**
@@ -29,8 +28,8 @@ class CardController extends Controller
      */
     public function create()
     {
-       
-        return view('card.create');
+        $Categories=Category::all();
+        return view('card.create',compact('Categories'));
 
     }
 
@@ -69,9 +68,11 @@ class CardController extends Controller
      * @param  \App\Models\Card  $card
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show($id)
     {
-      
+       
+        $cards=Card::where([['user_id','=',Auth::user()->id],['category_id','=',$id]])->get();
+        return view('card.index',compact('cards'));
 
     }
 
