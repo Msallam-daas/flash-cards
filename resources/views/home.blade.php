@@ -1,23 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
-        </div>
-    </div>
+    <div class="p-5 text-center text-white bg-dark">
+    <h1 class="mb-3">FLASH CARDS</h1>
+    <h4 class="mb-3">"Help you focus on what you dont know"</h4>
+    <a class="btn btn-primary" href="" role="button">Call to action</a>
+  </div>
+    
 </div>
 @endsection
