@@ -24,3 +24,6 @@ Route::resource('category',CategoryController::class);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/howtouse', function () {
+    return view('layouts.howtouse');
+});

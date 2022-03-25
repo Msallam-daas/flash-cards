@@ -32,9 +32,10 @@
 
 }
 footer{
-  margin-top:600px;
+  margin-top:575px;
  
 }
+
 
 }
 .home-testimonial {
@@ -108,20 +109,19 @@ footer{
     color: #6c83a2
 }
 
-footer{
 
-  background-color:#231834;
-}
 </style>
+<!-- Header Section -->
     <div style="width:100vw" class="row justify-content-center">
     <div class="p-5 text-center text-white " style="background-color:#000000">
     <h1 class="mb-5">FLASH CARDS</h1>
     <h4 class="mb-5">"Help you focus on what you dont know"</h4>
- 
-  </div>
-    
+  </div>   
 </div>
-<h2 class="mb-3 mt-5 text-center">Flashcards Concept</h2>
+<!-- End Header Section -->
+
+<!-- Flashcards Concept Section -->
+<h2 class="mb-3 mt-5 text-center" style="font-weight:bold">Flashcards Concept</h2>
 <div class="grid-container mb-5">
 
   <div class="item2" style="background-color:#f06e4b;color:white;border-radius: 15px;">
@@ -143,7 +143,9 @@ learning sessions using flashcards relies on how frequently you revisit the info
     <p style="font-size:16px;margin:.2em">Spaced Practice is one of the strategies learners can use to prevent us from losing information we’ve learned and begin embedding it into our long term memory.</p></div>
 
 </div>
+<!--End Flashcards Concept Section -->
 
+<!-- Testimonials Section -->
 <section class="home-testimonial" style="background-color:#000000">
     <div class="container-fluid">
         <div class="row d-flex justify-content-center testimonial-pos">
@@ -161,7 +163,7 @@ learning sessions using flashcards relies on how frequently you revisit the info
                         <div class="tour-item ">
                             <div class="tour-desc mt-3" style="background-color:#5C91B4">
                                 <div class="tour-text text-white text-center">“AWriting out carefully what to remember, and how to remember .”</div>
-                                <div class="d-flex justify-content-center pt-2 pb-2"><img class="tm-people" src="https://images.pexels.com/photos/6625914/pexels-photo-6625914.jpeg" alt=""></div>
+                                <div class="d-flex justify-content-center pt-2 pb-2"><img class="tm-people" src="https://images.pexels.com/photos/6893889/pexels-photo-6893889.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
                                 <div class="link-name d-flex justify-content-center text-white">Balbir Kaur</div>
                                 <div class="link-position d-flex justify-content-center text-white">Student</div>
                             </div>
@@ -171,8 +173,8 @@ learning sessions using flashcards relies on how frequently you revisit the info
                         <div class="tour-item ">
                             <div class="tour-desc mt-3" style="background-color:#5C91B4">
                                 <div class="tour-text text-white text-center">“Wow, I felt like I learned this in a flash!  Also, spaced repetition is far out!.”</div>
-                                <div class="d-flex justify-content-center pt-2 pb-2"><img class="tm-people" src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""></div>
-                                <div class="link-name d-flex justify-content-center text-white">Balbir Kaur</div>
+                                <div class="d-flex justify-content-center pt-2 pb-2"><img class="tm-people" src="https://images.pexels.com/photos/842548/pexels-photo-842548.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
+                                <div class="link-name d-flex justify-content-center text-white">Yaser Khaled</div>
                                 <div class="link-position d-flex justify-content-center text-white">Student</div>
                             </div>
                         </div>
@@ -180,10 +182,9 @@ learning sessions using flashcards relies on how frequently you revisit the info
                     <div class="col-md-4 style-3" >
                         <div class="tour-item " >
                             <div class="tour-desc  mt-3" style="background-color:#5C91B4">
-                                <div class="tour-text text-white text-center">“Amazing idea it really added value to me thank you 
-.”</div>
-                                <div class="d-flex justify-content-center pt-2 pb-2"><img class="tm-people" src="https://images.pexels.com/photos/4946604/pexels-photo-4946604.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""></div>
-                                <div class="link-name d-flex justify-content-center text-white">Balbir Kaur</div>
+                                <div class="tour-text text-white text-center">“Amazing idea it really added value to me thank you .”</div>
+                                <div class="d-flex justify-content-center pt-2 pb-2"><img class="tm-people" src="https://images.pexels.com/photos/1438081/pexels-photo-1438081.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
+                                <div class="link-name d-flex justify-content-center text-white">Ali Ahmad</div>
                                 <div class="link-position d-flex justify-content-center text-white">Student</div>
                             </div>
                         </div>
@@ -191,7 +192,10 @@ learning sessions using flashcards relies on how frequently you revisit the info
                 </div>
         </section>
 </section>
-<footer class=" text-center text-whit "  style="background-color:#000000">
+<!-- End Testimonials Section -->
+
+<!-- Footer Section -->
+    <footer class=" text-center text-whit "  style="background-color:#000000">
   <!-- Grid container -->
   <div class="container p-4 pb-0">
     <!-- Section: Social media -->
@@ -200,14 +204,10 @@ learning sessions using flashcards relies on how frequently you revisit the info
       <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
         ><i class="fab fa-facebook-f"></i
       ></a>
-
-     
-
       <!-- Linkedin -->
       <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
         ><i class="fab fa-linkedin-in"></i
       ></a>
-
       <!-- Github -->
       <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
         ><i class="fab fa-github"></i
@@ -216,13 +216,12 @@ learning sessions using flashcards relies on how frequently you revisit the info
     <!-- Section: Social media -->
   </div>
   <!-- Grid container -->
-
   <!-- Copyright -->
   <div class="text-center p-3"  style="background-color:#000000">
-  
-    <a class="text-white" href="https://mdbootstrap.com/">  © 2020 Copyright:FlashCards.com</a>
+    <a class="text-white" href="https://mdbootstrap.com/" style="text-decoration: none;">  © 2020 Copyright:FlashCards.com</a>
   </div>
   <!-- Copyright -->
 </footer>
+<!--End Footer Section -->
 
 @endsection
