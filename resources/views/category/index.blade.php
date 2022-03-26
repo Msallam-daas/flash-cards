@@ -28,19 +28,11 @@
 
 .flex-container {
   display: flex;
-  
-
-
-
-
 justify-content: center
 
 }
 
 .flex-container > div {
-
-  
-  
   font-size: 30px;
 }
 @media (max-width: 1024px){
@@ -77,7 +69,7 @@ footer{
 </Style>
 
     <div class="  mt-5">
-    <h1 class="mb-3 mt-5 text-center" >Categories</h1>
+    <h1 class="mb-3 mt-5 text-center " >Categories</h1>
 
 <a class="btn btn-link float-end mb-5" href="{{route('category.create')}}">Create Category</a>
 @if (session('success'))
@@ -111,7 +103,7 @@ footer{
 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);" >
               <div class="flip-card-front ">
-                <p class="card-title">{{$category['name']}}</p>
+                <p class="card-title" >{{$category['name']}}</p>
               </div>
               </a>
             </div>

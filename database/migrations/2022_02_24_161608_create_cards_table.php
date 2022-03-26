@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('cards', function (Blueprint $table) {
             $table->id();
-            $table->string('icon');
+            // $table->string('icon');
             $table->string('front');
             $table->string('back');
             $table->string('color');

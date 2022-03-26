@@ -42,7 +42,7 @@ class CardController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'icon'=>'required',
+            // 'icon'=>'required',
             'front'=>'required',
             'back'=>'required',
             'color'=>'required'
@@ -51,7 +51,7 @@ class CardController extends Controller
 
         ]);
         $card=new Card();
-        $card->icon=$request->input('icon');
+        // $card->icon=$request->input('icon');
         $card->front=$request->input('front');
         $card->back=$request->input('back');
         $card->color=$request->input('color');
@@ -97,14 +97,14 @@ class CardController extends Controller
     public function update(Request $request, Card $card)
     {
         $request->validate([
-            'icon'=>'required',
+            // 'icon'=>'required',
             'front'=>'required',
             'back'=>'required',
             'color'=>'required'
 
         ]);
         // $card=new Card();
-        $card->icon=$request->input('icon');
+        // $card->icon=$request->input('icon');
         $card->front=$request->input('front');
         $card->back=$request->input('back');
         $card->color=$request->input('color');

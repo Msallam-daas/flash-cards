@@ -27,7 +27,7 @@ footer{
 <form action="{{route('category.update', $category->id)}}" method="post" class="m-5">
         @csrf
         @method('put')
-        <input type="text" name="icon" class="form-control mb-3" placeholder="category icon" value="{{$category['icon']}}"/>
+        <!-- <input type="text" name="icon" class="form-control mb-3" placeholder="category icon" value="{{$category['icon']}}"/> -->
         <input type="text" name="name" class="form-control mb-3" placeholder="category front" value="{{$category['name']}}"/>
         <input type="text" name="color" class="form-control mb-3" placeholder="category back" value="{{$category['color']}}"/>
         <select  style="display:none" name="category_id">
@@ -36,7 +36,7 @@ footer{
   
 
         </select>
-        <button class="btn btn-primary float-end px-5" type="submit" >Submit</button>
+        <button class="btn btn-dark float-end px-5" type="submit" >Submit</button>
 
 </form>
 

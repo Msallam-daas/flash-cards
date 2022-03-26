@@ -9,7 +9,7 @@ class Card extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'icon',
+        // 'icon',
         'front',
         'back',
         'color'

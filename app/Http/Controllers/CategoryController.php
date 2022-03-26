@@ -44,12 +44,12 @@ class CategoryController extends Controller
     {
         
         $request->validate([
-            'icon'=>'required',
+            // 'icon'=>'required',
             'name'=>'required',
             'color'=>'required'
         ]);
         $category=new Category();
-        $category->icon=$request->input('icon');
+        // $category->icon=$request->input('icon');
         $category->name=$request->input('name');
         $category->color=$request->input('color');
         $category->user_id=Auth::user()->id;
@@ -92,12 +92,12 @@ class CategoryController extends Controller
     {
           
         $request->validate([
-            'icon'=>'required',
+            // 'icon'=>'required',
             'name'=>'required',
             'color'=>'required'
         ]);
         // $category=new Category();
-        $category->icon=$request->input('icon');
+        // $category->icon=$request->input('icon');
         $category->name=$request->input('name');
         $category->color=$request->input('color');
         $category->user_id=Auth::user()->id;

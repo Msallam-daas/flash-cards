@@ -25,10 +25,10 @@ footer{
 
 <form action="{{route('category.store')}}" method="post" class="m-5">
         @csrf
-        <input type="text" name="icon" class="form-control mb-3" placeholder="category icon" />
+        <!-- <input type="text" name="icon" class="form-control mb-3" placeholder="category icon" /> -->
         <input type="text" name="name" class="form-control mb-3" placeholder="category name" />
         <input type="text" name="color" class="form-control mb-3" placeholder="category color" />
-        <button class="btn btn-primary float-end px-5" type="submit" >Submit</button>
+        <button class="btn btn-dark float-end px-5" type="submit" >Submit</button>
 
 </form>
 
