@@ -2,32 +2,114 @@
 
 @section('content')
 <Style>
+  .item1 {
+  grid-area: myArea;
+  
+
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas: 'myArea myArea myArea myArea ';
+  grid-gap: 10px;
+
+  padding: 10px;
+  margin-top:1rem;
+ 
+}
+
+.grid-container > div {
+ 
+  text-align: center;
+  padding: 20px 0;
+  font-size: 18px;
+  
+}
+
+.flex-container {
+  display: flex;
+  
+
+
+
+
+justify-content: center
+
+}
+
+.flex-container > div {
+
+  
+  
+  font-size: 30px;
+}
+@media (max-width: 1024px){
+    .grid-container {
+
+grid-template-areas: 'myArea myArea myArea';
+
+
+}
+}
+@media (max-width: 775px){
+    .grid-container {
+
+grid-template-areas: 'myArea myArea';
+ margin-left:5rem;
+
+}
+}
   @media (max-width: 765px){
+    .grid-container {
+
+grid-template-areas: 'myArea';
+margin-left:0rem;
+
+}
+
 
 footer{
   margin-top:575px;
  
 }
+
 }
 </Style>
 
     <div class="  mt-5">
     <h1 class="mb-3 mt-5 text-center" >Categories</h1>
 
-<a class="btn btn-link float-end" href="{{route('category.create')}}">Create Category</a>
+<a class="btn btn-link float-end mb-5" href="{{route('category.create')}}">Create Category</a>
 @if (session('success'))
 <div class="alert alert-success">
     {{session('success')}}
 </div>
 @endif
 
-<div class="card-container">
+
+
+  <!-- <div class="grid-container mb-5 mt-5">
+  @foreach($Categories as $category)
+  <div class="item" style="background:{{$category['color']}};color:white;border-radius: 15px;text-align:center">
+    <h3 class="card-title">{{$category['name']}}</h3>
+
+  </div>
+  @endforeach
+  </div> -->
+
+  
+  <div class="grid-container mb-5">
 
 @foreach($Categories as $category)
 <div class="card-all">
 <div class="flip-card" >
   <a href="{{route('card.show',$category->id)}}">
-            <div class="flip-card-inner" style="background:{{$category['color']}}" >
+            <div  style="background:{{$category['color']}}; 
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);" >
               <div class="flip-card-front ">
                 <p class="card-title">{{$category['name']}}</p>
               </div>
@@ -35,17 +117,25 @@ footer{
             </div>
            
           </div>
-          
-          <a  style="margin:0.5em" class="btn btn-dark" href="{{route('category.edit', $category->id)}}">EDIT</a>
+          <div class="flex-container">
+          <div>
+          <a  style="margin:0.5em" class="btn btn-dark" href="{{route('category.edit', $category->id)}}"><i class="fas fa-edit"></i></a>
+          </div>
+          <div>
           <form action="{{route('category.destroy', $category->id)}}" method="post">
         @csrf
         @method('delete')
-        <button class="btn btn-dark" type="submit">DELET</button>
+        <button class="btn btn-dark" type="submit"><i class="fas fa-trash"></i></button>
 
 </form>
+</div>
+</div>
       
 </div >       
 @endforeach
+
+
+
 </>
 
 </div>

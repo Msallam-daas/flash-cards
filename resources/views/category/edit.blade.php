@@ -24,7 +24,7 @@ footer{
 </div>
 @endif
 
-<form action="{{route('category.update', $category->id)}}" method="post" class="m-3">
+<form action="{{route('category.update', $category->id)}}" method="post" class="m-5">
         @csrf
         @method('put')
         <input type="text" name="icon" class="form-control mb-3" placeholder="category icon" value="{{$category['icon']}}"/>

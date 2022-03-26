@@ -23,7 +23,7 @@ footer{
 </div>
 @endif
 
-<form action="{{route('category.store')}}" method="post" class="m-3">
+<form action="{{route('category.store')}}" method="post" class="m-5">
         @csrf
         <input type="text" name="icon" class="form-control mb-3" placeholder="category icon" />
         <input type="text" name="name" class="form-control mb-3" placeholder="category name" />
