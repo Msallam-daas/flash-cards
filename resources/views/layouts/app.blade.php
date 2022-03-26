@@ -56,7 +56,7 @@
                     @guest
                             @if (Route::has('login'))
                     <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Home') }}</a>
+                                    <a class="nav-link" href="{{ route('home') }}">{{ __('Home') }}</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('How to use') }}</a>
@@ -67,7 +67,7 @@
            
                                 @else
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Home') }}</a>
+                                    <a class="nav-link" href="{{ route('home') }}">{{ __('Home') }}</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('How to use') }}</a>
@@ -75,9 +75,7 @@
                         <li class="nav-item  ">
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('Categories') }}</a>
                                 </li>
-                                <li class="nav-item ">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Reviews') }}</a>
-                                </li>
+                                
                               
 
                                 @endguest

@@ -59,7 +59,7 @@ class CardController extends Controller
         $card->category_id=$request->input('category_id');
         $card->save();
         // $card=Card::create($request->all());
-        return redirect()->route('card.index')->with('success','success added card');
+        return redirect()->route('category.index')->with('success','success added card');
     }
 
     /**
@@ -103,7 +103,7 @@ class CardController extends Controller
             'color'=>'required'
 
         ]);
-        $card=new Card();
+        // $card=new Card();
         $card->icon=$request->input('icon');
         $card->front=$request->input('front');
         $card->back=$request->input('back');
@@ -111,7 +111,7 @@ class CardController extends Controller
         $card->user_id=Auth::user()->id;
         $card->category_id=$request->input('category_id');
         $card->save();
-        return redirect()->route('card.index')->with('success','success edited card');
+        return redirect()->route('category.index')->with('success','success edited card');
     }
 
     /**
@@ -123,7 +123,7 @@ class CardController extends Controller
     public function destroy(Card $card)
     {
         $card->delete();
-        return redirect()->route('card.index')->with('success','success deleted card');
+        return redirect()->route('category.index')->with('success','success deleted card');
 
     }
 }

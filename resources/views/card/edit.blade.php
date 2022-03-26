@@ -1,8 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>Card Update</h1>
-<hr/>
+<Style>
+  @media (max-width: 765px){
+
+footer{
+  margin-top:575px;
+ 
+}
+}
+</Style>
+<h1 class="mb-3 mt-5 text-center">Card Update</h1>
+
+
 
 @if ($errors->any())
 <div class="alert alert-danger">
@@ -15,7 +25,7 @@
 </div>
 @endif
 
-<form action="{{route('card.update', $card->id)}}" method="post">
+<form action="{{route('card.update', $card->id)}}" method="post" class="m-5">
         @csrf
         @method('put')
         <input type="text" name="icon" class="form-control mb-3" placeholder="card icon" value="{{$card['icon']}}"/>
@@ -27,5 +37,35 @@
 </form>
 
 
+
+<!-- Footer Section -->
+<footer class=" text-center text-whit "  style="background-color:#000000;margin-top:150px">
+  <!-- Grid container -->
+  <div class="container p-4 pb-0">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+      <!-- Linkedin -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
+      <!-- Github -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-github"></i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+  <!-- Copyright -->
+  <div class="text-center p-3"  style="background-color:#000000">
+    <a class="text-white" href="https://mdbootstrap.com/" style="text-decoration: none;">  © 2020 Copyright:FlashCards.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!--End Footer Section -->
 
 @endsection

@@ -96,13 +96,13 @@ class CategoryController extends Controller
             'name'=>'required',
             'color'=>'required'
         ]);
-        $category=new Category();
+        // $category=new Category();
         $category->icon=$request->input('icon');
-        $category->namet=$request->input('name');
+        $category->name=$request->input('name');
         $category->color=$request->input('color');
         $category->user_id=Auth::user()->id;
         $category->save();
-        // $card=Card::create($request->all());
+        // $category=Category::create($request->all());
         return redirect()->route('category.index')->with('success','success edited category');
     
     }
@@ -115,7 +115,7 @@ class CategoryController extends Controller
      */
     public function destroy(Category $category)
     {
-        $card->delete();
+        $category->delete();
         return redirect()->route('category.index')->with('success','success deleted category');
 
     }

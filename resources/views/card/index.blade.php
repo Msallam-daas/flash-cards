@@ -1,46 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FLASH CARDS</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css">
-       <!-- Styles -->
-       <link rel="stylesheet" type="text/css" href="{{url('css/card.css')}}" />
+@extends('layouts.app')
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
-</head>
-<body style="width:100% !important">
-    
-    <div class="container w-90 mt-5">
-        <nav>
-        <a class="navbar-brand" href="{{route('card.index')}}">
-            <img src="{{asset('images/flash_cards.png')}}" alt="logo" />
-        </a>
-    <ul class="nav justify-content-center">
-  <li class="nav-item">
-  <a class="breadcrumb-item" href="{{route('card.index')}}">HOME</a>
-  </li>
-  <li class="nav-item">
-  <a class="breadcrumb-item" href="{{route('card.create')}}">Create</a>
-  </li>
-  <li class="nav-item">
-  <a class="breadcrumb-item" href="{{route('card.index')}}">How to Use</a>
-  </li>
-  <li class="nav-item">
-  <a class="breadcrumb-item" href="{{route('card.index')}}">Study Plan</a>
-  </li>
-  <li class="nav-item">
-  <a class="breadcrumb-item" href="{{route('card.index')}}">Profile</a>
-  </li>
-</ul>
-</nav>
+@section('content')
+<Style>
+  @media (max-width: 765px){
 
+footer{
+  margin-top:575px;
+ 
+}
+}
+</Style>
 
-<h1>Flash Card</h1>
+    <div class="  mt-5">
+    <h1 class="mb-3 mt-5 text-center" >Flash Cards</h1>
 <a class="btn btn-link float-end" href="{{route('card.create')}}">Create Card</a>
 @if (session('success'))
 <div class="alert alert-success">
@@ -77,7 +49,34 @@
 </>
 
 </div>
-</body>
-</html>
+<!-- Footer Section -->
+<footer class=" text-center text-whit mt-5"  style="background-color:#000000">
+  <!-- Grid container -->
+  <div class="container p-4 pb-0">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+      <!-- Linkedin -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
+      <!-- Github -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-github"></i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+  <!-- Copyright -->
+  <div class="text-center p-3"  style="background-color:#000000">
+    <a class="text-white" href="https://mdbootstrap.com/" style="text-decoration: none;">  © 2020 Copyright:FlashCards.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!--End Footer Section -->
 
-
+@endsection
