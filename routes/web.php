@@ -23,7 +23,11 @@ Route::resource('category',CategoryController::class);
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', function () {
+    return view('home');
+});
+
 Route::get('/howtouse', function () {
     return view('layouts.howtouse');
 });

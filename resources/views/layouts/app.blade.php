@@ -31,7 +31,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white ">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/home') }}">
+                <a class="navbar-brand" href="{{ url('/') }}">
                 <img src="{{asset('images/flash_cards.png')}}"  alt="logo" />
                 </a>
                
@@ -45,7 +45,7 @@
                     @guest
                             @if (Route::has('login'))
                             <li class="nav-item">
-                                    <a class="nav-link" href="{{ url('/home') }}">{{ __('Home') }}</a>
+                                    <a class="nav-link" href="{{ url('/') }}">{{ __('Home') }}</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link"  href="{{ url('/howtouse') }}">{{ __('How to use') }}</a>
@@ -56,7 +56,7 @@
            
                                 @else
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ url('/home') }}">{{ __('Home') }}</a>
+                                    <a class="nav-link" href="{{ url('/') }}">{{ __('Home') }}</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link"  href="{{ url('/howtouse') }}">{{ __('How to use') }}</a>

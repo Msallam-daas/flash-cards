@@ -28,7 +28,7 @@ class CardController extends Controller
      */
     public function create()
     {
-        $Categories=Category::all();
+        $Categories=Category::where('user_id','=',Auth::user()->id)->get();
         return view('card.create',compact('Categories'));
 
     }
