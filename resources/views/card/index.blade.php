@@ -71,12 +71,14 @@ footer{
 
     <div class="  mt-5">
     <h1 class="mb-3 mt-5 text-center" >Flash Cards</h1>
-<a class="btn btn-link float-end " href="{{route('card.create')}}">Create Card</a>
+<a class="btn btn-link float-end  " href="{{route('card.create')}}">Create Card</a>
 @if (session('success'))
-<div class="alert alert-success">
+<div class="alert alert-success " >
     {{session('success')}}
 </div>
 @endif
+
+
 
 <div class="grid-container mb-5">
 

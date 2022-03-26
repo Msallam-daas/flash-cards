@@ -29,8 +29,8 @@ footer{
         @csrf
         @method('put')
         <!-- <input type="text" name="icon" class="form-control mb-3" placeholder="card icon" value="{{$card['icon']}}"/> -->
-        <input type="text" name="front" class="form-control mb-3" placeholder="card front" value="{{$card['front']}}"/>
-        <input type="text" name="back" class="form-control mb-3" placeholder="card back" value="{{$card['back']}}"/>
+        <input type="text" name="front" class="form-control mb-3" placeholder="card name" value="{{$card['front']}}"/>
+        <input type="text" name="back" class="form-control mb-3" placeholder="card description" value="{{$card['back']}}"/>
         <input type="text" name="color" class="form-control mb-3" placeholder="card color" value="{{$card['color']}}"/>
         <input type="hidden" name="category_id" class="form-control mb-3" placeholder="card color" value="{{$card['category_id']}}"/>
 
