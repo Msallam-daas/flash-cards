@@ -44,8 +44,8 @@
                     <ul class="navbar-nav me-auto">
                     @guest
                             @if (Route::has('login'))
-                    <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('home') }}">{{ __('Home') }}</a>
+                            <li class="nav-item">
+                                    <a class="nav-link" href="{{ url('/home') }}">{{ __('Home') }}</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link"  href="{{ url('/howtouse') }}">{{ __('How to use') }}</a>
@@ -56,7 +56,7 @@
            
                                 @else
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('home') }}">{{ __('Home') }}</a>
+                                    <a class="nav-link" href="{{ url('/home') }}">{{ __('Home') }}</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link"  href="{{ url('/howtouse') }}">{{ __('How to use') }}</a>
@@ -87,6 +87,7 @@
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
+                            
                         @else
             
                     

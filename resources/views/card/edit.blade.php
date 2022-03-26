@@ -32,6 +32,8 @@ footer{
         <input type="text" name="front" class="form-control mb-3" placeholder="card front" value="{{$card['front']}}"/>
         <input type="text" name="back" class="form-control mb-3" placeholder="card back" value="{{$card['back']}}"/>
         <input type="text" name="color" class="form-control mb-3" placeholder="card color" value="{{$card['color']}}"/>
+        <input type="hidden" name="category_id" class="form-control mb-3" placeholder="card color" value="{{$card['category_id']}}"/>
+
         <button class="btn btn-dark float-end px-5" type="submit" >Submit</button>
 
 </form>
