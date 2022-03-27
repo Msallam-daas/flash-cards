@@ -124,7 +124,7 @@ class CardController extends Controller
     public function destroy(Card $card)
     {
         $card->delete();
-        return redirect()->route('category.index')->with('success','success deleted card');
+        return redirect()->route('category.index')->with('error','success deleted card');
 
     }
 }
