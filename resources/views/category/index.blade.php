@@ -76,10 +76,7 @@ footer{
 <div class="alert alert-success">
     {{session('success')}}
 </div>
-@else
-<div class="alert alert-error" style="background-color:#ff4500;color:white">
-    {{session('error')}}
-</div>
+
 @endif
 
 
